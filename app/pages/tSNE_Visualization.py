@@ -1,3 +1,18 @@
+import os
+import sys
+
+# Add project root to Python path
+ROOT_DIR = os.path.abspath(
+    os.path.join(
+        os.path.dirname(__file__),
+        "..",
+        ".."
+    )
+)
+
+if ROOT_DIR not in sys.path:
+    sys.path.append(ROOT_DIR)
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -8,9 +23,13 @@ st.title(
     "📉 t-SNE Visualization"
 )
 
-embedding = load_object(
-    "artifacts/tsne_embedding.pkl"
-)
+import pickle
+
+with open(
+    "artifacts/tsne_embedding.pkl",
+    "rb"
+) as file:
+    embedding = pickle.load(file)
 
 clusters = pd.read_csv(
     "artifacts/cluster_labels.csv"
