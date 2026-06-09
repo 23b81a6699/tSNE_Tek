@@ -1,0 +1,15 @@
+[ 2026-06-05 14:00:10,529 ] INFO numexpr.utils - NumExpr defaulting to 8 threads.
+[ 2026-06-05 14:00:16,421 ] INFO src.logger - Pipeline Started
+[ 2026-06-05 14:00:16,422 ] INFO src.logger - Starting Data Ingestion
+[ 2026-06-05 14:00:16,613 ] INFO src.logger - Data Ingestion Completed
+[ 2026-06-05 14:00:16,614 ] INFO src.logger - Starting Data Transformation
+[ 2026-06-05 14:00:17,192 ] INFO src.logger - Object saved successfully at artifacts\scaler.pkl
+[ 2026-06-05 14:00:17,193 ] INFO src.logger - Data Transformation Completed
+[ 2026-06-05 14:00:17,194 ] INFO src.logger - Training KMeans Model
+[ 2026-06-05 14:00:34,074 ] INFO src.logger - Object saved successfully at artifacts\kmeans.pkl
+[ 2026-06-05 14:00:34,075 ] INFO src.logger - KMeans Training Completed
+[ 2026-06-05 14:00:34,075 ] INFO src.logger - Generating t-SNE Embedding
+[ 2026-06-05 14:01:11,315 ] INFO src.logger - Object saved successfully at artifacts\tsne_embedding.pkl
+[ 2026-06-05 14:01:11,315 ] INFO src.logger - t-SNE Embedding Generated
+[ 2026-06-05 14:01:11,315 ] INFO src.logger - Silhouette Score : 0.11879608130370638
+[ 2026-06-05 14:01:11,315 ] INFO src.logger - Embedding Shape : (2240, 2)
